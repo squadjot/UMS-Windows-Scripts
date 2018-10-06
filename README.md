@@ -46,7 +46,7 @@ script_dir=c:\\UMS Scripts\\Scripts Menu
 ---
 
 ### Bugs, Fixes & Troubleshooting 
-The script_dir functionality of UMS is buggy and will result in multiple calls to the the bat file.
+**Important:** The script_dir functionality of UMS is buggy and will result in multiple calls to the the bat file.
 To avoid this i made a batfile called @run-once.bat which is called in every bat file in 'Scripts Menu'
 
 Furthermore i have found that the following settings *can* break UMS's ability to "play" the Scripts correctly. 
