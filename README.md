@@ -4,6 +4,8 @@ This is a small setup and guide on how to run BAT files with Universal Media Ser
 The functionality has not been fully implemented, but with some adjustments (included in this download ) it actually works pretty decent.
 
 
+
+
 A few posts mentioning *script_dir*
 
 http://universalmediaserver.com/forum/memberlist.php?mode=viewprofile&u=62
@@ -27,10 +29,10 @@ Alternatively you can put the **UMS Scripts** folder where ever you want. Just r
 **\\UMS Scripts** : This is the base folder. It comes with two additional folders inside. 'Scripts Menu' and 'helpers'
 
 
-**\\UMS Scripts\\Scripts Menu** : This is the folder that contains the bat files that will be shown on your TV
+**\\UMS Scripts\\Scripts Menu** : This folder contains the bat files that will be shown on your TV
 
 
-**\\UMS Scripts\\helpers** : This is the "engineroom" of your scripts. This is where you put more advanced parts of your scripting, writing temp files, saving backups etc.
+**\\UMS Scripts\\helpers** : This is the "engineroom" of your scripts. This is where you can put supplementing scripts, write temp files, save backups etc.
 
 
 
@@ -60,7 +62,19 @@ KeepAspectRatio = true
 ---
 
 ### Are you using non-default paths?
-Edit **UMS Scripts\\helpers\\@ums-script.bat** to adjust paths.
+If you did NOT install UMS in: *C:\Program Files (x86)\Universal Media Server*
+and/or do NOT use default profile directory: *C:\ProgramData\UMS* 
+Then edit **UMS Scripts\\helpers\\@ums-script.bat** to adjust paths.
+
+---
+
+### Disable autoplay on your device!
+Unless you want to run all succeeding scripts, then you have to disable any autoplay(-next) -feature on your device. This functionality is not something UMS has any control over.
+
+---
+
+### Ready to go
+Start UMS and navigate to **Server Settings > Scripts** on your TV/device.
 
 ---
 
@@ -72,13 +86,6 @@ These are the current example scripts included
 * **Backup UMS configs.bat** ( Copy the configs to \\helpers\\backups\\#timestamp# )
 * **Reboot Computer.bat**
 * **Shutdown Computer.bat**
-
----
-
-### Creating new scripts
-Tip: if you are making complicated scripts then consider starting a second script in a separate process.
-I did this for *Restart UMS.bat* because i was experiencing problems with the *timeout* command. 
-The batfile would never finish if i placed the command in the intial batfile that was called by UMS.
 
 ---
 
